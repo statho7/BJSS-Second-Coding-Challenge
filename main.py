@@ -1,4 +1,15 @@
 def LBBT_tax(property_value):
+    '''
+    Up to £145,000          0%
+
+    £145,001 to £250,000    2%
+
+    £250,001 to £325,000    5%
+
+    £325,001 to £750,000    10%
+
+    Over £750,000           12%
+    '''
     # '''
     taxes = {   '1st band':{'lower':0,'upper':145000,'rate':0},
                 '2nd band':{'lower':145000,'upper':250000,'rate':2},
@@ -38,16 +49,3 @@ def LBBT_tax(property_value):
 
 if __name__ == '__main__':
     LBBT_tax()
-
-
-'''
-Up to £145,000          0%
-
-£145,001 to £250,000    2%
-
-£250,001 to £325,000    5%
-
-£325,001 to £750,000    10%
-
-Over £750,000           12%
-'''

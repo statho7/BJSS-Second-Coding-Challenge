@@ -5,47 +5,47 @@ class TestMain(unittest.TestCase):
     def setUp(self):
         print('about to test a function')
 
-    def test_LBBT_tax(self):
+    def test_low_band(self):
         test_param = 145000
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 0)
 
-    def test_LBBT_tax1(self):
+    def test_second_band(self):
         test_param = 250000
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 2100)
 
-    def test_LBBT_tax2(self):
+    def test_third_band(self):
         test_param = 300000
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 4600)
 
-    def test_LBBT_tax3(self):
+    def test_fourth_band(self):
         test_param = 485000
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 21850)
 
-    def test_LBBT_tax4(self):
+    def test_upper_band(self):
         test_param = 850000
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 60350)
 
-    def test_LBBT_tax5(self):
+    def test_empty_string_input(self):
         test_param = ''
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 'please enter number')
 
-    def test_LBBT_tax6(self):
+    def test_zero_value_input(self):
         test_param = 0
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 'please enter number')
 
-    def test_LBBT_tax7(self):
+    def test_None_input(self):
         test_param = None
         result = main.LBBT_tax(test_param)
         self.assertEqual(result, 'please enter number')
 
-    def test_LBBT_tax8(self):
+    def test_string_input(self):
         test_param = '_egv45_'
         result = main.LBBT_tax(test_param)
         self.assertTrue(isinstance(result, TypeError))
