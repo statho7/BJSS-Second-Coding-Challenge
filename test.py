@@ -33,17 +33,17 @@ class TestMain(unittest.TestCase):
     def test_empty_string_input(self):
         test_param = ''
         result = main.LBBT_tax(test_param)
-        self.assertEqual(result, 'please enter number')
+        self.assertEqual(result, 'Please enter number')
 
     def test_zero_value_input(self):
         test_param = 0
         result = main.LBBT_tax(test_param)
-        self.assertEqual(result, 'please enter number')
+        self.assertEqual(result, 'Please enter number greater than zero.')
 
     def test_None_input(self):
         test_param = None
         result = main.LBBT_tax(test_param)
-        self.assertEqual(result, 'please enter number')
+        self.assertEqual(result, 'Please enter number')
 
     def test_string_input(self):
         test_param = '_egv45_'
